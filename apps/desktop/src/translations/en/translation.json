@@ -256,7 +256,10 @@
     "prose--step-2-list-step-2": "Select the “Relink Device” button below to start the linking process"
   },
   "dialog--forward-message": {
-    "error--forwarding-failed": "Failed to forward the message",
+    "error--failed": "Failed to forward the message",
+    "error--share-failed": "Failed to share the link",
+    "label--share-submit": "Share",
+    "label--share-success": "Link shared",
     "label--submit": "Forward Message",
     "label--success": "Message successfully forwarded",
     "label--title": "Select Recipient"
