@@ -866,8 +866,13 @@
     "prose--subtitle": "{shortAppName}-ID"
   },
   "settings--security": {
+    "hint--prevent-screenshots-mdm": "Diese Einstellung wird von Ihrer Organisation verwaltet.",
+    "hint--prevent-screenshots-unsupported": "Diese Einstellung wird auf ihrem System nicht unterstützt.",
     "label--app-protection": "App-Schutz",
     "label--change-password": "App-Passwort ändern",
+    "label--prevent-screenshots": "Screenshots verhindern",
+    "label--prevent-screenshots-disabled": "Screenshots erstellen ist aktiviert",
+    "label--prevent-screenshots-enabled": "Screenshots erstellen ist deaktiviert",
     "label--title": "Sicherheitseinstellungen",
     "prose--subtitle": "Passwort"
   },

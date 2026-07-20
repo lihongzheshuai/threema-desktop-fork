@@ -866,8 +866,13 @@
     "prose--subtitle": "{shortAppName} ID"
   },
   "settings--security": {
+    "hint--prevent-screenshots-mdm": "This setting is managed by your organization.",
+    "hint--prevent-screenshots-unsupported": "This setting is not supported on your system.",
     "label--app-protection": "App Protection",
     "label--change-password": "Change Password",
+    "label--prevent-screenshots": "No screenshots",
+    "label--prevent-screenshots-disabled": "Taking screenshots is enabled",
+    "label--prevent-screenshots-enabled": "Taking screenshots is disabled",
     "label--title": "Security Settings",
     "prose--subtitle": "Password"
   },
