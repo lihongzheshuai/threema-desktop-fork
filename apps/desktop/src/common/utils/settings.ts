@@ -37,8 +37,7 @@ export function createScreenshotPreventionState(
         log,
     );
 
-    const isDisabledByLocalSettings =
-        privacySettings.localScreenshotPrevention ?? import.meta.env.BUILD_PLATFORM === 'windows';
+    const isDisabledByLocalSettings = privacySettings.localScreenshotPrevention === true;
 
     return {
         mode: isDisabledByMdm !== undefined ? 'mdm' : 'changeable',
