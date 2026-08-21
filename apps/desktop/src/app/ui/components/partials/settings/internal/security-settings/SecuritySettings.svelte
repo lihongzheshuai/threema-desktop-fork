@@ -4,7 +4,6 @@
 <script lang="ts">
   import {globals} from '~/app/globals';
   import {ROUTE_DEFINITIONS} from '~/app/routing/routes';
-  import Hint from '~/app/ui/components/atoms/hint/Hint.svelte';
   import Text from '~/app/ui/components/atoms/text/Text.svelte';
   import KeyValueList from '~/app/ui/components/molecules/key-value-list';
   import type {SecuritySettingsProps} from '~/app/ui/components/partials/settings/internal/security-settings/props';
@@ -62,6 +61,7 @@
     key={$i18n.t('settings--security.label--prevent-screenshots', 'No screenshots')}
     disabled={screenshotPreventionState.mode !== 'changeable'}
     checked={screenshotPreventionState.enabled}
+    hint={screenshotPreventionState.mode === 'changeable' ? undefined : hintText}
     onswitch={(state) => handleScreenshotPreventionUpdate(state.new)}
   >
     <Text text={screenshotPreventionLabel}></Text>
@@ -75,12 +75,6 @@
     <KeyValueList.ItemWithButton icon="edit" key="" onclick={handleClickChangePassword}>
       <Text text={$i18n.t('settings--security.label--change-password', 'Change App Password')} />
     </KeyValueList.ItemWithButton>
-    {#if screenshotPreventionState.mode === 'changeable'}
-      {@render screenshotPreventionSwitch()}
-    {:else}
-      <Hint id={crypto.randomUUID()} text={hintText}>
-        {@render screenshotPreventionSwitch()}
-      </Hint>
-    {/if}
+    {@render screenshotPreventionSwitch()}
   </KeyValueList.Section>
 </KeyValueList>
