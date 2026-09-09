@@ -231,15 +231,6 @@
             return false;
           }
 
-          // Exclude receiver of original message to forward.
-          if (
-            content.type === 'forward-message' &&
-            item.receiver.lookup.type === content.receiverLookup.type &&
-            item.receiver.lookup.uid === content.receiverLookup.uid
-          ) {
-            return false;
-          }
-
           // Filter blocked contacts.
           if (item.receiver.type === 'contact' && item.receiver.isBlocked) {
             return false;
