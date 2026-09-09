@@ -823,6 +823,7 @@ function main(
 
                     showScreenSharingReminder(appBaseUrl, text, label)
                         .then((win) => {
+                            win.setContentProtection(window?.isContentProtected() ?? false);
                             screenSharingReminderWindow = win;
                         })
                         .catch(() => {
@@ -1049,6 +1050,7 @@ function main(
             (event, enable: boolean) => {
                 validateSenderFrame(event.senderFrame);
                 window?.setContentProtection(enable);
+                screenSharingReminderWindow?.setContentProtection(enable);
                 log.info('ElectronIpcCommand.SET_SCREENSHOT_PROTECTION called with', enable);
             },
         );
